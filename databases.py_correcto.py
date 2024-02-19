@@ -25,7 +25,7 @@ def getDataClean():
     db = conexion.get_database("Prediccion")
     collection = db.get_collection("ejemplo1")
     items = collection.find()
-    data = [{'_id': str(item['_id']), 'name': item['name'], 'physics': item['physics'], 'maths': item['maths']} for item in items]
+    data = [{'name': item['name'], 'physics': item['physics'], 'maths': item['maths']} for item in items]
     return data
 
 datos = getData()
